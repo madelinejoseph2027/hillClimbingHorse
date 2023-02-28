@@ -10,10 +10,15 @@ The following diagram shows an example "horse." Green links are sensorized, whil
 
 ![Body-Brain Diagram](https://user-images.githubusercontent.com/122245493/220243994-f18b9ff8-2993-41eb-a7e1-76335d226b88.jpg)
 
-The algorithm evolves horses optimized for locomotion using the parallel hillclimber model. In brief, an initial random parent is generated and then cloned. The cloned child will be modified in one way. To prevent confounding changes (i.e., combinations of changes whose effects' origin can not be deconvoluted from the multiple changes), **either** the body or brain of the child is mutated. A coin toss determines if the brain or body is varied. If the brain is varied, a secondary coin toss determines if a sensor or synaptic weight is changed. If the body is varied, that secondary coin toss determines if a section is added or removed. The parent and mutated child are then "competed" against each other based on some metric of fitness. Whichever individual has the superior fitness is preserved for further mutation and competition, while the other is discarded. In this instance, locomotion to the right (measured as average x-position of the leftmost legs) is the fitness function. The following diagram shows the basic scheme of the evolutionary algorithm. 
+
+The algorithm evolves horses optimized for locomotion using the parallel hillclimber model. In brief, an initial random parent is generated and then cloned. The cloned child will be mutated in one way. To prevent confounding changes (i.e., combinations of changes whose effects' origin can not be deconvoluted from the multiple changes), **either** the body or brain of the child is mutated. A coin toss determines if the brain or body is varied. If the brain is varied, a secondary coin toss determines if a sensor or synaptic weight is changed. If the body is varied, that secondary coin toss determines if a section is added or removed. The parent and mutated child are then "competed" against each other based on some metric of fitness. Whichever individual has the superior fitness is preserved for further mutation and competition, while the other is discarded. In this instance, locomotion to the right (measured as average x-position of the leftmost legs) is the fitness function. The following diagram shows the basic scheme of the evolutionary algorithm. 
 
 ![EvAlgo](https://user-images.githubusercontent.com/122245493/221730155-d7553383-cfa0-45ff-8c91-202135178db7.jpg)
 
+
+The curves below show the results of 5 runs of the evolutionary algorithm. For 100 generations, populations of 10 individuals were evolved and competed. The diagram tracks the fitness of the best individual of the 10 across those 100 generations. 
+
+![FitnessCurve](https://user-images.githubusercontent.com/122245493/221730753-45c95812-b2ba-484c-9754-fe268de0dd6c.png)
 
 
 ## Usage
