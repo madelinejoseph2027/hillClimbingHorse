@@ -22,4 +22,4 @@ frontLegPhaseOffset = 0
 
 
 numberOfGenerations = 100
-populationSize = 1
+populationSize = 10
